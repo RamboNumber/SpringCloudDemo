@@ -1,0 +1,32 @@
+server:
+  port: 8001
+
+#配置日志级别
+logging:
+  level:
+    com: 
+     xm: 
+      springcloud: 
+       dao: trace
+      
+spring: 
+   application:
+      name:  user
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name:  com.mysql.jdbc.Driver              # mysql驱动包
+    url: jdbc:mysql://10.1.51.31:3306/timehotel?useSSL=true         # 数据库名称
+    username: root
+    password: cube1501
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+      
+mybatis-plus:
+  mapper-locations: classpath:/com/springcloud/dao/mapper/*Mapper.xml
+  type-aliases-package: com.xm.springcloud.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false

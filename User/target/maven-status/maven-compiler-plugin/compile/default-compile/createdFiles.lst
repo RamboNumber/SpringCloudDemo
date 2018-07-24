@@ -1,0 +1,5 @@
+com\xm\springcloud\dao\UserMapper.class
+com\xm\springcloud\service\impl\UserServiceImpl.class
+com\xm\springcloud\controller\UserController.class
+com\xm\springcloud\UserApplication.class
+com\xm\springcloud\service\UserService.class
